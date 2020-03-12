@@ -1,5 +1,5 @@
 const { nextISSTimesForMyLocation } = require("./iss");
-const { zonedTimeToUtc, utcToZonedTime, format } = require("date-fns-tz");
+const { utcToZonedTime, format } = require("date-fns-tz");
 
 //@passTimes - array of objects {duration: number, risetime: timestamp}
 nextISSTimesForMyLocation((err, passTimes) => {
@@ -10,7 +10,7 @@ nextISSTimesForMyLocation((err, passTimes) => {
     // const date = utcToZonedTime(time, "America/Toronto");
     const timeZone = "America/Toronto";
     const zonedDate = utcToZonedTime(time, timeZone);
-    const pattern = "cccccc pp zzzz"//".m.yyy HH:mm:ss.SSS [GMT]Z (z)";
+    const pattern = "cccccc PP pp zzzz"; //".m.yyy HH:mm:ss.SSS [GMT]Z (z)";
     const output = format(zonedDate, pattern, { timeZone });
     console.log(`Next pass at ${output} for ${pass.duration} seconds!`);
   });

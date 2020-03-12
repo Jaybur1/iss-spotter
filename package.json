@@ -1,7 +1,6 @@
 {
   "name": "iss-spotter",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,6 +8,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "date-fns": "^2.10.0",
+    "date-fns-tz": "^1.0.10",
     "request": "^2.88.2"
   },
   "devDependencies": {
@@ -27,5 +27,6 @@
   "bugs": {
     "url": "https://github.com/Jaybur1/iss-spotter/issues"
   },
-  "homepage": "https://github.com/Jaybur1/iss-spotter#readme"
+  "homepage": "https://github.com/Jaybur1/iss-spotter#readme",
+  "description": ""
 }

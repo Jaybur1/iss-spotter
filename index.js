@@ -6,7 +6,9 @@ nextISSTimesForMyLocation((err, passTimes) => {
   if (err) return err;
 
   passTimes.forEach(pass => {
+    //console.log(pass.risetime);
     const time = new Date(pass.risetime * 1000);
+   // console.log(new Date(pass.risetime).toString());
     // const date = utcToZonedTime(time, "America/Toronto");
     const timeZone = "America/Toronto";
     const zonedDate = utcToZonedTime(time, timeZone);
